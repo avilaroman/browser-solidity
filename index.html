@@ -58,49 +58,49 @@
 			<div id="header">
 				<div id="menu">
 					<ul id="options">
-						<li class="settingsView active" title="Settings">Settings</li>
-						<li class="publishView" title="Publish" >Files</li>
-						<li class="envView" title="Environment">Contract</li>
+						<li class="settingsView active" title="Settings">Opciones</li>
+						<li class="publishView" title="Publish" >Archivos</li>
+						<li class="envView" title="Environment">Contrato</li>
 						<li class="debugView" title="Debugger">Debugger</li>
-						<li class="staticanalysisView" title="Static Analysis">Analysis</li>
-						<li id="helpButton"><a href="https://solidity.readthedocs.org" target="_blank" title="Open Documentation">Docs</a></li>
+						<li class="staticanalysisView" title="Static Analysis">Análisis</li>
+						<li id="helpButton"><a href="https://solidity.readthedocs.org" target="_blank" title="Abrir Documentación">Documentación</a></li>
 					</ul>
 					<img id="solIcon" title="Solidity realtime compiler and runtime" src="assets/img/remix_logo_512x512.svg" alt="Solidity realtime compiler and runtime">
 				</div>
 				<div id="optionViews" class="settingsView">
 					<div id="txView"></div>
 					<div id="settingsView">
-						<div class="version crow"><strong>Current Solidity version:</strong> <span id="version">( Loading... )</span></div>
-						<div class="crow">Switch version: <select id="versionSelector"></select></div>
+						<div class="version crow"><strong>Actual Versión de Solidity:</strong> <span id="version">( Cargando... )</span></div>
+						<div class="crow">Cambiar versión: <select id="versionSelector"></select></div>
 						<div class="crow">
-							<label for="editorWrap"><input id="editorWrap" type="checkbox">Text Wrap</label>
-							<label for="optimize"><input id="optimize" type="checkbox">Enable Optimization</label>
-							<label for="autoCompile"><input id="autoCompile" type="checkbox" checked>Auto Compile</label>
-							<button id="compile" title="Compile source code">Compile</button>
+							<label for="editorWrap"><input id="editorWrap" type="checkbox">Texto en 1 hoja</label>
+							<label for="optimize"><input id="optimize" type="checkbox">Activar Optimización</label>
+							<label for="autoCompile"><input id="autoCompile" type="checkbox" checked>Auto Compilar</label>
+							<button id="compile" title="Compile source code">Compilar</button>
 						</div>
 					</div>
 					<div id="publishView">
 						<p>
-							<button id="gist" title="Publish all files as public gist on github.com"><i class="fa fa-github"></i> Publish Gist</button>Publish all open files to an anonymous github gist.<br/>
-							<button id="copyOver" title="Copy all files to another instance of browser-solidity.">Copy files</button> Copy all files to another instance of Browser-solidity.
+							<button id="gist" title="Publica todos los archivos con Gist en github.com"><i class="fa fa-github"></i> Publicar un Gist</button>Publica todos los archivos para un Gist anónimo.<br/>
+							<button id="copyOver" title="Copy all files to another instance of browser-solidity.">Copiar Archivos</button> Copia todos los archivos hacia otra instancia del Browser-solidity.
 						</p>
-						<p>You can also load a gist by adding the following <span class="pre">#gist=GIST_ID</span> to your url, where GIST_ID is the id of the gist to load.</p>
+						<p>También puedes cargar un gist agegando lo siguiente: <span class="pre">#gist=GIST_ID</span> a tu URL, donde GIST_ID es el id del gist a cargar.</p>
 					</div>
 					<div id="envView">
 						<div class="crow">
-							<label for="txorigin">Transaction origin:<select name="txorigin" id="txorigin"></select></label>
+							<label for="txorigin">Transacción origen:<select name="txorigin" id="txorigin"></select></label>
 						</div>
 						<div class="crow">
-							<label for="gasLimit"><input type="number" id="gasLimit" value="3000000"> Transaction gas limit</label>
+							<label for="gasLimit"><input type="number" id="gasLimit" value="3000000"> Transacción limite de combustible</label>
 						</div>
 						<div class="crow hide">
-							<label for="gasPrice"><input type="number" id="gasPrice" value="0"> Gas Price</label>
+							<label for="gasPrice"><input type="number" id="gasPrice" value="0"> Precio del Combustible</label>
 						</div>
 						<div class="crow">
-							<label for="value"><input type="text" id="value" value="0"> Value (e.g. .7 ether or 5 wei, defaults to ether)</label>
+							<label for="value"><input type="text" id="value" value="0"> Value (ejemplo .7 ether o 5 wei, lo más común para ether)</label>
 						</div>
 						<span id="executionContext">
-							Select execution environment: <br><br>
+							Seleccionar ejecución de entorno: <br><br>
 							<select id='selectExEnv'>
 							  <option id="vm-mode"
 							    title="Execution environment does not connect to any node, everything is local and in memory only."
@@ -130,15 +130,14 @@
 					</div>
 					<div id="staticanalysisView">
 						<p>
-							This tab provides support for <b>formal verification</b> of Solidity contracts.<br/>
-							This feature is still in development and thus also not yet well documented,
-							but you can find some information
-							<a href="http://solidity.readthedocs.io/en/latest/security-considerations.html#formal-verification">here</a>.
-							The compiler generates input to be verified
-							(or report errors). Please paste the text below into
+							Ésta tab provee soporte para <b>la verificación formal</b> de contratos con Solidity.<br/>
+							Se encuentra en contínuo desarrollo, y puedes encontrar información:
+							<a href="http://solidity.readthedocs.io/en/latest/security-considerations.html#formal-verification">aquí</a>.
+							El compilador genera entradas para ser verificadas
+							(o reportes de errores). Por favor pega el textp abajo en:
 							<a href="http://why3.lri.fr/try/">http://why3.lri.fr/try/</a>
-							to actually perform the verification.
-							We plan to support direct integration in the future.
+							Para realizar la verificación.
+							Planeamos hacer la integración directa en el futuro.
 						</p>
 						<textarea id="formalVerificationInput" readonly="readonly"></textarea>
 						<div id="formalVerificationErrors"></div>
